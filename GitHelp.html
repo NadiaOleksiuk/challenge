@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Шпаргалка по Git</title>
+</head>
+<body>
+	<h1><b>Git команди</b></h1>
+	<img src="Github2.png" alt="git" width="500" height="236">
+	<h2><i>Початок роботи</i></h2>
+		<p>$ git config global user.name "запис нікнейму"  /* зберігає налаштування конкретного користувача<br>
+		$ git config global user.email "запис почти" /* global дані будуть використовуватись для всіх проектів,
+		якщо необхідно для іншого вказуємо нові дані без global в каталозі цього проекту<br></p>
+		<p>$ git config  /* перегляд і встановлення параметри, які контролюють роботу git<br>
+		$ git config --list /* перегляд використовуваних налаштувань<br>
+		$ git help commit /* виклик допомоги по команді commit<br>
+		$ cd e:/git /* вибір папки<br>
+		$ git init /* у вибрану каталозі створити новий підкаталог з іменем .git, який вміщує 
+всі необхідні файли репозиторія (проект ще не знаходиться під контролем версій)
+Ex.: Initialized empty Git repository in E:/git/.git/<br>
+		<p>ESC, ввести :wq і нажати Enter /* вихід з текстового повідомлення "Please enter...blablabla"</p>
+		<p><img src="FileStatusLifecycle.png" alt="FileStatusLifecycle" width="638" height="359" align="right"></p>
+	<h2><i>Основні команди</i></h2> 
+		<p>$ git status /* для перевірки в якому стані знаходяться файли <br> 
+		$ git add . /* додати всі файли під версійний контроль для подальшого відслідковування<br>
+		$ git add index.html /* додати конкретний файл під версійний контроль для подальшого відслідковування<br>
+		$ git commit -m  /* фіксуємо зміни в гілку master <br>
+		$ git commit -m "first commit" /* фіксуємо зміни в гілку master з коментарем довільним для власного контролю<br>
+		$ git commit -a -m 'added new' /* автоматично фіксуємо  всі зміни відслідковуваних файлів на момент комміта,
+		проте за рахунок -а не потрібно виконувати команду add перед коммітом<br>
+		$ git push origin master /* відправка файлу на головний репозиторій<br>
+		$ git clone https://github.com/nromanen/Ch-051 . </p>
+	
+
+
+	<h2><i>Створення віддаленого репозиторію (завантаження на сайт GitHub)</i></h2>
+		<p>$ git remote  /* для перегляду списку імен всіх існуючих віддалених реозиторіїв<br>
+		$ git remote show origin<br>
+		$ git remote -v /* для перегляду до якого URL відповідає скороченне імя в Git<br>
+		$ git remote add origin https://github.com/NadiaOleksiuk/challenge.git /* додавання віддаленого репозиторію
+		під вибраним скороченним ім"ям (можна використовувати тепер ім"я origin зімасть довгого URL)<br>
+		$ git push -u origin master /* для кожної гілки додано посилання верх на відслідковування ****** ??? O_o </p>
+	<hr>
+	
+	<h1><b>Робота з гілками</b></h1>
+	<h2><i>Створення гілок</i></h2>
+		<p> $ git checkout -b new_f /* створити нову гілку new_f і відразу ж на неї перейти -b<br>
+		$ git branch new_f2 /* створити гілку, але без переходу на неї<br>
+		$ git checkout new_f2 /* перехід з гілки з назвою new_f на new_f2</p>
+		
+</body>
+</html>		
